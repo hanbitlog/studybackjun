@@ -1,14 +1,15 @@
+package io;
+
 import java.util.Scanner;
 
-public class Main2558 {
+public class Main1000 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
         sc.close();
-        if(0<a && b<10){
-            System.out.println(a+b);
-        }
-
+        System.out.println(a+b);
     }
+
 }

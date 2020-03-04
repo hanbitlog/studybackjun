@@ -1,18 +1,25 @@
+package io;
+
 import java.util.Scanner;
 
-public class Main2439 {
+public class Main2442 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count = sc.nextInt();
         sc.close();
-        for (int i = 1; i <=count; i++) {
-            for (int j = 1; j <=count-i; j++) {
+//        int half = count/2;
+        for (int i = 0; i <count; i++) {
+            int half = count-i;
+            for (int j = 2; j <=half; j++) {
                 System.out.print(" ");
             }
-            for (int j = count-i+1; j <=count; j++) {
+            int end = count + i;
+            for (int k = half; k <=end; k++) {
                 System.out.print("*");
             }
             System.out.println();
         }
+        
     }
+
 }

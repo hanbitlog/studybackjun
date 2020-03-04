@@ -1,16 +1,20 @@
+package io;
+
 import java.util.Scanner;
 
-public class Main11720 {
+public class Main11022 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int count = sc.nextInt();
-        String str = sc.next();
-        String[] strings = str.split("");
-        int result = 0;
         for (int i = 0; i < count; i++) {
-            result = result + Integer.valueOf(strings[i]);
+            int a= sc.nextInt();
+            int b= sc.nextInt();
+            if(a>0 && b<10){
+                System.out.println("Case #"+(i+1)+": "+a +" + "+b+" = "+(a + b));
+            }
         }
-        System.out.println(result);
         sc.close();
     }
+
 }
