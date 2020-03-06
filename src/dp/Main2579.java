@@ -2,7 +2,15 @@ package dp;
 
 import java.util.Scanner;
 
+/**
+ * The type Main 2579.
+ */
 public class Main2579 {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
