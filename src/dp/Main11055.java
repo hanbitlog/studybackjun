@@ -12,7 +12,7 @@ public class Main11055 {
 
         for (int i = 1; i <=n ; i++) {
             num[i] = sc.nextInt();
-            dp[i] = 1;
+            dp[i] = num[i];
         }
 
         for (int i = 2; i <= n; i++) {
