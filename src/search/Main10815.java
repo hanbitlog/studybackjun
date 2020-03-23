@@ -1,6 +1,4 @@
-package bs;
-
-import org.omg.CORBA.ARG_IN;
+package search;
 
 import java.util.Arrays;
 import java.util.Scanner;

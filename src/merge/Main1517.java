@@ -1,4 +1,4 @@
-package sort;
+package merge;
 
 import java.util.Scanner;
 

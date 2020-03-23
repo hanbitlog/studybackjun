@@ -1,8 +1,8 @@
-package sort;
+package merge;
 
 import java.util.Scanner;
 
-public class Main2447 {
+public class Main11729 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
     }

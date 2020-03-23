@@ -1,4 +1,4 @@
-package bs;
+package search;
 
 import java.util.Scanner;
 
