@@ -30,7 +30,7 @@ public class Main1929 {
         br.close();
     }
 
-    public static void getPrimeNum(){
+    private static void getPrimeNum(){
         primeNum[1] =true;
         // 소수가 아닌것들만 true로 체크해둠.
         for (int i = 2; i < primeNum.length ; i++) {

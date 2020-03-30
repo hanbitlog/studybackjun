@@ -1,62 +1,51 @@
 package merge;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Main11728 {
-    static int[] resultarr;
+
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int asize = Integer.parseInt(st.nextToken());
-        int bsize = Integer.parseInt(st.nextToken());
+        Scanner sc = new Scanner(System.in);
+        int asize = sc.nextInt();
+        int bsize = sc.nextInt();
         int[] arra = new int[asize];
         int[] arrb = new int[bsize];
-        resultarr = new int[asize+bsize];
-        st = new StringTokenizer(br.readLine());
+        int[] resultarr = new int[asize+bsize];
         for (int i = 0; i <asize ; i++) {
-            arra[i] = Integer.parseInt(st.nextToken());
+            arra[i] = sc.nextInt();
         }
         Arrays.sort(arra);
-
-        st = new StringTokenizer(br.readLine());
         for (int i = 0; i <bsize ; i++) {
-            arrb[i] = Integer.parseInt(st.nextToken());
+            arrb[i] = sc.nextInt();
         }
         Arrays.sort(arrb);
-
-        mergesort(arra, arrb);
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i <resultarr.length ; i++) {
-            sb.append(resultarr[i] + " ");
-        }
-        System.out.println(sb.toString());
-    }
-
-    private static void mergesort(int[] arra , int[] arrb){
+        System.out.println(arra.length + "  check" +  arrb.length);
         int i = 0;
         int j = 0;
         int k = 0;
-        while (i<= arra.length && j<=arrb.length){
+        while (i< asize && j< bsize){
             if(arra[i] > arrb[j]){
-                resultarr[k++]= arra[i++];
+                resultarr[k++]= arrb[j++];
             }else{
-                resultarr[k++]= arra[j++];
+                resultarr[k++]= arra[i++];
             }
         }
-        if(i> arra.length){
-            while(j<=arrb.length){
-                resultarr[k++] = arrb[j++];
-            }
-        }else{
-            while(i<=arra.length){
-                resultarr[k++] = arrb[i++];
-            }
+
+        while(j<bsize){
+            resultarr[k++] = arrb[j++];
         }
+        while(i<asize){
+            resultarr[k++] = arra[i++];
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int p = 0; p <resultarr.length ; p++) {
+            sb.append(resultarr[p] + " ");
+        }
+        System.out.println(sb.toString());
     }
 }
 

@@ -38,6 +38,7 @@ public class Main1260 {
 
         sc.close();
     }
+
     private static void dfs(int x){
         if(check[x]){
             return;
