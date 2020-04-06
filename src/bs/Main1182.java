@@ -2,6 +2,8 @@ package bs;
 
 import java.util.Scanner;
 
+
+
 public class Main1182 {
     static int N, S, count=0;
     static int[] arr;
@@ -37,4 +39,5 @@ public class Main1182 {
         dfs(v+1, su+arr[v]); // 지금 위치의 원소를 선택
         dfs(v+1, su); // 선택하지 않음.
     }
+
 }
